@@ -9,80 +9,60 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <style>
     /* Make the image fully responsive */
-    .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  outline: black;
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 1px solid black;
-  background-image: none;
-}
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: red;
-}
 
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: red;
-}
-    
+
+
+    .fixa {
+      /* position: absolute; */
+      position: fixed;
+      /* z-index: 1; */
+      left: 59.5%;
+      top: 63px;
+      /* background: black; */
+    }
   </style>
 </head>
 
 <body>
+  
 
   <div id="demo" class="carousel" data-ride="carousel">
-    <ul class="carousel-indicators">
-      <li data-target="#demo" data-slide-to="0" class="active"></li>
-      <li data-target="#demo" data-slide-to="1"></li>
-      <li data-target="#demo" data-slide-to="2"></li>
-    </ul>
+    
     <div class="carousel-inner">
       <div class="carousel-item active text-center">
-        <img src="Bild1.png" alt="Los Angeles" height="600vh" >
-        <div class="carousel-caption">
-          <h3>Los Angeles</h3>
-          <p>We had such a great time in LA!</p>
-        </div>
+        <img src="Bild1.png" alt="Los Angeles" height="700vh">
       </div>
       <div class="carousel-item text-center">
-        <img src="Bild2.png" alt="Chicago" height="600vh">
-        <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago!</p>
-        </div>
+        <img src="Bild2.png" alt="Chicago" height="700vh">
+
       </div>
       <div class="carousel-item text-center">
-        <img src="Bild3.png" alt="New York" height="600vh">
-        <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>We love the Big Apple!</p>
-        </div>
+        <img src="Bild3.png" alt="New York" height="700vh">
+
       </div>
       <div class="carousel-item text-center">
-        <img src="Bild4.png" alt="New York" height="600vh">
-        <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>We love the Big Apple!</p>
-        </div>
+        <canvas class="fixa" id="canvas" width="400" height="400">
+        </canvas>
+        <img src="Bild4_f.png" alt="New York" height="700vh">
+
       </div>
     </div>
     <a class="carousel-control-prev" href="#demo" data-slide="prev">
-      <span class="carousel-control-prev-icon" style="color: black;" ></span>
+      <!-- <span class="carousel-control-prev-icon" style="color: black;"></span> -->
+      <i class="fas fa-arrow-left fa-2x" style="color: black;"></i>
     </a>
     <a class="carousel-control-next" href="#demo" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
+      <!-- <span class="carousel-control-next-icon"></span> -->
+      <i class="fas fa-arrow-right fa-2x" style="color: black;"></i>
     </a>
   </div>
+
+
+  <script src="clock.js"></script>
 
 </body>
 
